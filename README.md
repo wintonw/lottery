@@ -1,10 +1,10 @@
 # lottery
  
-### Check the recent Powerball and MegaMillion drawings
+### Check the recent Powerball and MegaMillion drawings with your numbers
 Python files that can be ran on iOS devices with Pythonista
 
 ## Instructions: 
 - Copy file to your iOS device in Pythonista
 - Replace your numbers in `myNums` and `myXXXXball`
 - Wait for notification results
-- **Optional: Create Short Cuts with Siri**
+- **Optional:** Create Short Cuts with Siri

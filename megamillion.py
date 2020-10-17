@@ -21,7 +21,7 @@ Winning Numbers: %s, %i
 My Numbers: %s
 # Matched: %i
 Matched Powerball: %r
-    """ % (drawings[0].get('field_draw_date'), lastDrawing, int(drawings[0].get('mega_ball')), myNums, numMatched, matchedMegaball)
+    """ % (drawings[0].get('draw_date').replace('T00:00:00.000', ''), lastDrawing, int(drawings[0].get('mega_ball')), myNums, numMatched, matchedMegaball)
 
 notification.schedule(body)
 console.alert(body, button1="ok", hide_cancel_button=True)
