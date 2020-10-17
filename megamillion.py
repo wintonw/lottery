@@ -1,4 +1,6 @@
 import requests
+import notification
+import console
 # my numbers + mega as last
 myNums = [1, 2, 3, 4, 5]
 myMegaBall = 0
@@ -13,10 +15,13 @@ numMatched = len(set(myNums).intersection(lastDrawing))
 
 matchedMegaball = int(drawings[0].get('mega_ball')) == myMegaBall
 
-print("""
+body = """
 Date: %s
 Winning Numbers: %s, %i
 My Numbers: %s
 # Matched: %i
 Matched Powerball: %r
-    """ % (drawings[0].get('field_draw_date'), lastDrawing, int(drawings[0].get('mega_ball')), myNums, numMatched, matchedMegaball))
+    """ % (drawings[0].get('field_draw_date'), lastDrawing, int(drawings[0].get('mega_ball')), myNums, numMatched, matchedMegaball)
+
+notification.schedule(body)
+console.alert(body, button1="ok", hide_cancel_button=True)
